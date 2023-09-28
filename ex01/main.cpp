@@ -6,7 +6,7 @@
 /*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 13:17:41 by jkollner          #+#    #+#             */
-/*   Updated: 2023/09/28 13:55:40 by jkollner         ###   ########.fr       */
+/*   Updated: 2023/09/28 14:03:26 by jkollner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main() {
 	claptrap.beRepaired(2);
 	claptrap.guardGate();
 
-	std::cout << "CHECK AGAIN CAUSE IT WORKS BUT IDK IF THIS IS WHAT WAS ASKED."
+	std::cout << "CHECK AGAIN CAUSE IT WORKS BUT IDK IF THIS IS WHAT WAS ASKED." << std::endl;
 
 	return 0;
 }
