@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/28 13:17:41 by jkollner          #+#    #+#             */
-/*   Updated: 2023/09/28 14:04:02 by jkollner         ###   ########.fr       */
+/*   Created: 2023/09/28 13:27:13 by jkollner          #+#    #+#             */
+/*   Updated: 2023/09/28 13:51:40 by jkollner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#pragma once
+#include "ClapTrap.hpp"
 
-int main() {
-	ScavTrap claptrap("ScavTrap");
-	claptrap.attack("a random enemy");
-	claptrap.takeDamage(2);
-	claptrap.beRepaired(2);
-	claptrap.guardGate();
-
-	std::cout << "CHECK AGAIN CAUSE IT WORKS BUT IDK IF THIS IS WHAT WAS ASKED." << std::endl;
-
-	return 0;
-}
+class ScavTrap : ClapTrap{
+	private:
+		std::string name;
+		int hitPoints;
+		int energyPoints;
+		int attackDamage;
+	public:
+		ScavTrap( std::string name );
+		~ScavTrap( void );
+		void guardGate( void );
+		virtual void attack ( const std::string& target );
+		virtual void takeDamage ( unsigned int amount );
+		virtual void beRepaired ( unsigned int amount );
+};

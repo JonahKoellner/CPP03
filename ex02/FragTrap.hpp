@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/28 13:17:41 by jkollner          #+#    #+#             */
-/*   Updated: 2023/09/28 14:04:02 by jkollner         ###   ########.fr       */
+/*   Created: 2023/10/23 13:26:30 by jkollner          #+#    #+#             */
+/*   Updated: 2023/10/23 15:33:06 by jkollner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#pragma once
 
-int main() {
-	ScavTrap claptrap("ScavTrap");
-	claptrap.attack("a random enemy");
-	claptrap.takeDamage(2);
-	claptrap.beRepaired(2);
-	claptrap.guardGate();
+#include "ClapTrap.hpp"
 
-	std::cout << "CHECK AGAIN CAUSE IT WORKS BUT IDK IF THIS IS WHAT WAS ASKED." << std::endl;
-
-	return 0;
-}
+class FragTrap : ClapTrap {
+	public:
+		FragTrap();
+		~FragTrap();
+};

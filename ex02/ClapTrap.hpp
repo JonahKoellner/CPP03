@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/28 13:17:41 by jkollner          #+#    #+#             */
-/*   Updated: 2023/09/28 14:04:02 by jkollner         ###   ########.fr       */
+/*   Created: 2023/09/28 13:01:16 by jkollner          #+#    #+#             */
+/*   Updated: 2023/09/28 13:18:37 by jkollner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#pragma once
+#include <iostream>
 
-int main() {
-	ScavTrap claptrap("ScavTrap");
-	claptrap.attack("a random enemy");
-	claptrap.takeDamage(2);
-	claptrap.beRepaired(2);
-	claptrap.guardGate();
-
-	std::cout << "CHECK AGAIN CAUSE IT WORKS BUT IDK IF THIS IS WHAT WAS ASKED." << std::endl;
-
-	return 0;
-}
+class ClapTrap{
+	private:
+		std::string name;
+		int hitPoints;
+		int energyPoints;
+		int attackDamage;
+	public:
+		ClapTrap( std::string name );
+		~ClapTrap( void );
+		void attack ( const std::string& target );
+		void takeDamage ( unsigned int amount );
+		void beRepaired ( unsigned int amount );
+};
