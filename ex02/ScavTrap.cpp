@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jonahkollner <jonahkollner@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 13:27:15 by jkollner          #+#    #+#             */
-/*   Updated: 2023/09/28 13:50:41 by jkollner         ###   ########.fr       */
+/*   Updated: 2023/10/24 11:06:13 by jonahkollne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,19 @@ ScavTrap::ScavTrap( std::string name ) : ClapTrap(name){
 	this->energyPoints = 50;
 	this->attackDamage = 20;
 	std::cout << "ScavTrap " << this->name << " is constructed!" << std::endl;
+}
+
+ScavTrap::ScavTrap( ScavTrap &src) : ClapTrap(src){
+	this->name = src.name;
+	this->hitPoints = src.hitPoints;
+	this->energyPoints = src.energyPoints;
+	this->attackDamage = src.attackDamage;
+}
+
+ScavTrap& ScavTrap::operator=( ScavTrap &cop) {
+	this->name = cop.name;
+	this->hitPoints = cop.hitPoints;
+	this->energyPoints = cop.energyPoints;
+	this->attackDamage = cop.attackDamage;
+	return (*this);
 }

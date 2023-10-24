@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jonahkollner <jonahkollner@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 13:08:53 by jkollner          #+#    #+#             */
-/*   Updated: 2023/09/28 13:20:18 by jkollner         ###   ########.fr       */
+/*   Updated: 2023/10/24 11:01:30 by jonahkollne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,20 @@ ClapTrap::~ClapTrap( void ) {
 	std::cout << "ClapTrap destructor called" << std::endl;
 }
 
+ClapTrap::ClapTrap( ClapTrap &src) {
+	this->name = src.name;
+	this->hitPoints = src.hitPoints;
+	this->energyPoints = src.energyPoints;
+	this->attackDamage = src.attackDamage;
+}
+
+ClapTrap& ClapTrap::operator=( ClapTrap &cop) {
+	this->name = cop.name;
+	this->hitPoints = cop.hitPoints;
+	this->energyPoints = cop.energyPoints;
+	this->attackDamage = cop.attackDamage;
+	return (*this);
+}
 
 void ClapTrap::attack ( const std::string& target ) {
 	if (this->energyPoints > 0) {

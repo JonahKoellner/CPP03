@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jonahkollner <jonahkollner@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 13:27:13 by jkollner          #+#    #+#             */
-/*   Updated: 2023/09/28 13:51:40 by jkollner         ###   ########.fr       */
+/*   Updated: 2023/10/24 11:03:49 by jonahkollne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ class ScavTrap : ClapTrap{
 	public:
 		ScavTrap( std::string name );
 		~ScavTrap( void );
+		ScavTrap( ScavTrap &src); // copy constructor
+		ScavTrap& operator=( ScavTrap &cop); // copy operator
 		void guardGate( void );
 		virtual void attack ( const std::string& target );
 		virtual void takeDamage ( unsigned int amount );
