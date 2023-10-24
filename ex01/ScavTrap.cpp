@@ -6,7 +6,7 @@
 /*   By: jonahkollner <jonahkollner@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 13:27:15 by jkollner          #+#    #+#             */
-/*   Updated: 2023/10/24 11:38:11 by jonahkollne      ###   ########.fr       */
+/*   Updated: 2023/10/24 12:21:25 by jonahkollne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,14 @@ ScavTrap::ScavTrap( std::string name ) : ClapTrap(name){
 	std::cout << "ScavTrap " << this->name << " is constructed!" << std::endl;
 }
 
-ScavTrap::ScavTrap( ScavTrap &src) : ClapTrap(src){
-	*this = src;
-}
+//ScavTrap::ScavTrap( ScavTrap &src) : ClapTrap(src){
+//	*this = src;
+//}
 
-ScavTrap& ScavTrap::operator=( ScavTrap &cop) {
-	this->name = cop.name;
-	this->hitPoints = cop.hitPoints;
-	this->energyPoints = cop.energyPoints;
-	this->attackDamage = cop.attackDamage;
-	return (*this);
-}
+//ScavTrap& ScavTrap::operator=( ScavTrap &cop) {
+//	this->name = cop.name;
+//	this->hitPoints = cop.hitPoints;
+//	this->energyPoints = cop.energyPoints;
+//	this->attackDamage = cop.attackDamage;
+//	return (*this);
+//}
