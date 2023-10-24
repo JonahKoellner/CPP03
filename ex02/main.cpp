@@ -3,23 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jonahkollner <jonahkollner@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 13:17:41 by jkollner          #+#    #+#             */
-/*   Updated: 2023/09/28 14:04:02 by jkollner         ###   ########.fr       */
+/*   Updated: 2023/10/24 11:41:47 by jonahkollne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main() {
-	ScavTrap claptrap("ScavTrap");
-	claptrap.attack("a random enemy");
-	claptrap.takeDamage(2);
-	claptrap.beRepaired(2);
-	claptrap.guardGate();
-
-	std::cout << "CHECK AGAIN CAUSE IT WORKS BUT IDK IF THIS IS WHAT WAS ASKED." << std::endl;
+	FragTrap fragtrap("FragTrap");
+	fragtrap.attack("a random enemy");
+	fragtrap.takeDamage(2);
+	fragtrap.beRepaired(2);
+	fragtrap.highFivesGuys();
 
 	return 0;
 }

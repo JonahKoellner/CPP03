@@ -6,7 +6,7 @@
 /*   By: jonahkollner <jonahkollner@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 13:27:15 by jkollner          #+#    #+#             */
-/*   Updated: 2023/10/24 11:27:27 by jonahkollne      ###   ########.fr       */
+/*   Updated: 2023/10/24 11:38:11 by jonahkollne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,7 @@ ScavTrap::ScavTrap( std::string name ) : ClapTrap(name){
 }
 
 ScavTrap::ScavTrap( ScavTrap &src) : ClapTrap(src){
-	this->name = src.name;
-	this->hitPoints = src.hitPoints;
-	this->energyPoints = src.energyPoints;
-	this->attackDamage = src.attackDamage;
+	*this = src;
 }
 
 ScavTrap& ScavTrap::operator=( ScavTrap &cop) {

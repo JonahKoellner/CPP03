@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+         #
+#    By: jonahkollner <jonahkollner@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/13 13:05:24 by jkollner          #+#    #+#              #
-#    Updated: 2023/09/28 13:26:40 by jkollner         ###   ########.fr        #
+#    Updated: 2023/10/24 11:44:27 by jonahkollne      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-name = ScavTrap
+name = FragTrap
 cc = c++
 cflags = -Wall -Werror -Wextra -std=c++98
-src = main.cpp ClapTrap.cpp ScavTrap.cpp
+src = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 obj = ${src:.cpp=.o}
 
 all: ${name}

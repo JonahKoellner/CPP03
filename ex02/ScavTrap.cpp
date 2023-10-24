@@ -6,7 +6,7 @@
 /*   By: jonahkollner <jonahkollner@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 13:27:15 by jkollner          #+#    #+#             */
-/*   Updated: 2023/10/24 11:06:13 by jonahkollne      ###   ########.fr       */
+/*   Updated: 2023/10/24 11:37:54 by jonahkollne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,6 @@ void ScavTrap::attack ( const std::string& target ) {
 	if (this->energyPoints > 0) {
 		this->energyPoints--;
 		std::cout << "ScavTrap " << this->name << " attacks " << target << ", causing " << this->attackDamage << " points of damage!" << std::endl;
-	} else {
-		std::cout << "ScavTrap " << this->name << " is out of energy!" << std::endl;
-	}
-}
-
-void ScavTrap::takeDamage ( unsigned int amount ) {
-	if (this->energyPoints > 0) {
-		this->hitPoints -= amount;
-		this->energyPoints--;
-		std::cout << "ScavTrap " << this->name << " takes " << amount << " points of damage!" << std::endl;
-	} else {
-		std::cout << "ScavTrap" << this->name << " is out of energy!" << std::endl;
-	}
-}
-
-void ScavTrap::beRepaired( unsigned int amount ) {
-	if (this->energyPoints > 0) {
-		this->hitPoints += amount;
-		this->energyPoints--;
-		std::cout << "ScavTrap " << this->name << " is repaired by " << amount << " points!" << std::endl;
 	} else {
 		std::cout << "ScavTrap " << this->name << " is out of energy!" << std::endl;
 	}
@@ -58,10 +38,7 @@ ScavTrap::ScavTrap( std::string name ) : ClapTrap(name){
 }
 
 ScavTrap::ScavTrap( ScavTrap &src) : ClapTrap(src){
-	this->name = src.name;
-	this->hitPoints = src.hitPoints;
-	this->energyPoints = src.energyPoints;
-	this->attackDamage = src.attackDamage;
+	*this = src;
 }
 
 ScavTrap& ScavTrap::operator=( ScavTrap &cop) {
