@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jonahkollner <jonahkollner@student.42.f    +#+  +:+       +#+        */
+/*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 13:08:53 by jkollner          #+#    #+#             */
-/*   Updated: 2023/10/24 11:02:13 by jonahkollne      ###   ########.fr       */
+/*   Updated: 2024/01/05 12:22:50 by jkollner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,36 @@ void ClapTrap::beRepaired( unsigned int amount ) {
 	} else {
 		std::cout << "ClapTrap " << this->name << " is out of energy!" << std::endl;
 	}
+}
+
+std::string ClapTrap::getName( void ) {
+	return (this->name);
+}
+
+void ClapTrap::setName( std::string name ) {
+	this->name = name;
+}
+
+int ClapTrap::getHitPoints( void ) {
+	return (this->hitPoints);
+}
+
+void ClapTrap::setHitPoints( int hitPoints ) {
+	this->hitPoints = hitPoints;
+}
+
+int ClapTrap::getEnergyPoints( void ) {
+	return (this->energyPoints);
+}
+
+void ClapTrap::setEnergyPoints( int energyPoints ) {
+	this->energyPoints = energyPoints;
+}
+
+int ClapTrap::getAttackDamage( void ) {
+	return (this->attackDamage);
+}
+
+void ClapTrap::setAttackDamage( int attackDamage ) {
+	this->attackDamage = attackDamage;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jonahkollner <jonahkollner@student.42.f    +#+  +:+       +#+        */
+/*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 13:01:16 by jkollner          #+#    #+#             */
-/*   Updated: 2023/10/24 10:59:43 by jonahkollne      ###   ########.fr       */
+/*   Updated: 2024/01/05 10:53:00 by jkollner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class ClapTrap{
 		int attackDamage;
 	public:
 		ClapTrap( std::string name );
-		ClapTrap( ClapTrap &src); // copy constructor
-		ClapTrap& operator=( ClapTrap &cop); // copy operator
+		ClapTrap( ClapTrap &src ); // copy constructor
+		ClapTrap& operator=( ClapTrap &cop ); // copy operator
 		~ClapTrap( void );
 		void attack ( const std::string& target );
 		void takeDamage ( unsigned int amount );

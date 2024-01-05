@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jonahkollner <jonahkollner@student.42.f    +#+  +:+       +#+        */
+/*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 13:27:13 by jkollner          #+#    #+#             */
-/*   Updated: 2023/10/24 12:10:50 by jonahkollne      ###   ########.fr       */
+/*   Updated: 2024/01/05 12:44:05 by jkollner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,7 @@
 
 class ScavTrap : virtual public ClapTrap{
 	private:
-		//std::string name;
-		//int hitPoints;
-		//int energyPoints;
-		//int attackDamage;
+		ScavTrap();
 	public:
 		ScavTrap( std::string name );
 		~ScavTrap( void );

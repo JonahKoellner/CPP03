@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jonahkollner <jonahkollner@student.42.f    +#+  +:+       +#+        */
+/*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 13:17:41 by jkollner          #+#    #+#             */
-/*   Updated: 2023/10/24 12:23:15 by jonahkollne      ###   ########.fr       */
+/*   Updated: 2024/01/05 12:12:13 by jkollner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 int main() {
-	ScavTrap scavtrap("ScavTrap");
+	ScavTrap scavtrap("ScavanagergeTrap");
 	ScavTrap scav (scavtrap);
 	scavtrap.attack("a random enemy");
 	scavtrap.takeDamage(2);

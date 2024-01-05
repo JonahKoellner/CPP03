@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jonahkollner <jonahkollner@student.42.f    +#+  +:+       +#+        */
+/*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 13:01:16 by jkollner          #+#    #+#             */
-/*   Updated: 2023/10/24 12:22:39 by jonahkollne      ###   ########.fr       */
+/*   Updated: 2024/01/05 12:19:07 by jkollner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 
 class ClapTrap{
-	protected:
+	private:
 		std::string name;
 		int hitPoints;
 		int energyPoints;
@@ -22,9 +22,17 @@ class ClapTrap{
 	public:
 		ClapTrap( std::string name );
 		~ClapTrap( void );
-		ClapTrap( ClapTrap &src); // copy constructor
-		ClapTrap& operator=( ClapTrap &cop); // copy operator
+		ClapTrap( ClapTrap &src ); // copy constructor
+		ClapTrap& operator=( ClapTrap &cop ); // copy operator
 		void attack ( const std::string& target );
 		void takeDamage ( unsigned int amount );
 		void beRepaired ( unsigned int amount );
+		std::string getName( void );
+		void setName( std::string name );
+		int getHitPoints( void );
+		void setHitPoints( int hitPoints );
+		int getEnergyPoints( void );
+		void setEnergyPoints( int energyPoints );
+		int getAttackDamage( void );
+		void setAttackDamage( int attackDamage );
 };
